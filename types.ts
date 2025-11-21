@@ -10,6 +10,9 @@ export interface Project {
   featured?: boolean;
   repoUrl?: string;
   demoUrl?: string;
+  challenge?: string;
+  solution?: string;
+  features?: string[];
 }
 
 export interface Experience {

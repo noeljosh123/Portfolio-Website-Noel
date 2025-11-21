@@ -39,6 +39,15 @@ export const PROJECTS: Project[] = [
     role: "Project Manager & Lead Developer",
     date: "2024 – 2025",
     description: "A comprehensive mobile solution for Metro Manila utilizing crowdsourcing, web scraping, and graph-based algorithms to provide real-time flood data and safe routes.",
+    challenge: "Metro Manila faces frequent urban flooding, yet existing navigation apps lack real-time, street-level flood data. Commuters are often left stranded or directed into hazardous areas during heavy rains.",
+    solution: "RoaDry integrates community-driven reports with automated news scraping and Azure Vision AI to verify flood incidents. It uses a modified Dijkstra’s algorithm to calculate routes that actively avoid flooded nodes.",
+    features: [
+      "Crowdsourced flood reporting with geolocation",
+      "AI-powered image verification using Azure Vision",
+      "NLP-based web scraping for news validation",
+      "Safe route calculation avoiding hazard zones",
+      "Real-time push notifications for nearby alerts"
+    ],
     tags: ["Dart", "Flutter", "Firebase", "Azure Vision AI", "Python (NLP)", "Dijkstra's Algo"],
     image: "https://picsum.photos/seed/roadry/800/600",
     featured: true,
@@ -47,7 +56,7 @@ export const PROJECTS: Project[] = [
     achievements: [
       "Led a multidisciplinary team through full development lifecycle.",
       "Integrated Azure Vision AI for flood detection image processing.",
-      "Developed NLP web scrapers to gather verified news data.",
+      "Developed NLP web scrapers to gather verified data from news outlets.",
       "Implemented Dijkstra’s algorithm for safe route calculation."
     ]
   },
@@ -57,6 +66,15 @@ export const PROJECTS: Project[] = [
     role: "Full-Stack Developer",
     date: "2025",
     description: "A modern full-stack cinema booking platform featuring a complete booking flow, interactive seat mapping, and a comprehensive admin dashboard for real-time system management.",
+    challenge: "Building a booking system requires handling complex state for seat selection, preventing double-bookings, and providing a seamless user experience across devices, all while managing real-time data.",
+    solution: "KwikSlot utilizes a modular React architecture with Context API for global state management. The seat map is a dynamic grid component that handles selection logic and VIP pricing tiers efficiently.",
+    features: [
+      "Interactive 8x10 seat grid with VIP logic",
+      "Real-time booking conflict resolution (simulation)",
+      "Admin dashboard with revenue charts and user management",
+      "Multi-step checkout flow with payment simulation",
+      "Dark mode UI optimized for cinema context"
+    ],
     tags: ["React", "TypeScript", "Tailwind CSS", "Vite", "Context API"],
     image: "https://picsum.photos/seed/kwikslot/800/600",
     featured: true,
@@ -75,6 +93,15 @@ export const PROJECTS: Project[] = [
     role: "Lead Developer",
     date: "2024",
     description: "A web-based fitness tracking application integrating BMI calculation, calorie tracking, and workout planning.",
+    challenge: "Fitness beginners often struggle with scattered tools for tracking nutrition, workouts, and body metrics. They need a unified, simple platform to visualize progress.",
+    solution: "FITCAL provides a centralized dashboard where users can log daily meals, calculate BMI instantly, and plan weekly workout routines with a customizable schedule builder.",
+    features: [
+      "Automated BMI and TDEE Calculator",
+      "Personal Record (PR) logger for lifts",
+      "Weekly workout scheduler with drag-and-drop feel",
+      "Calorie intake tracker with macro breakdown",
+      "Secure user authentication and profile management"
+    ],
     tags: ["PHP", "MySQL", "HTML5", "CSS3", "JavaScript"],
     image: "https://picsum.photos/seed/fitcal/800/600",
     featured: true,

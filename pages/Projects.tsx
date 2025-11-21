@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowUpRight, Eye } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { PROJECTS } from '../constants';
 
 const Projects: React.FC = () => {
@@ -44,17 +45,13 @@ const Projects: React.FC = () => {
                      
                      {/* Overlay */}
                      <div className="absolute inset-0 bg-zinc-950/60 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
-                        {project.demoUrl && (
-                          <a 
-                            href={project.demoUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300 delay-100 flex items-center gap-2 px-6 py-3 rounded-full bg-white text-zinc-950 font-bold hover:bg-accent"
-                          >
-                            <Eye size={20} />
-                            <span>View Case Study</span>
-                          </a>
-                        )}
+                        <Link 
+                          to={`/project/${project.id}`}
+                          className="transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300 delay-100 flex items-center gap-2 px-6 py-3 rounded-full bg-white text-zinc-950 font-bold hover:bg-accent"
+                        >
+                          <Eye size={20} />
+                          <span>View Case Study</span>
+                        </Link>
                      </div>
 
                      {/* Date Badge */}
@@ -87,16 +84,12 @@ const Projects: React.FC = () => {
                    
                    {/* Mobile-only Links (since desktop has them in overlay) */}
                    <div className="lg:hidden flex items-center gap-6">
-                      {project.demoUrl && (
-                        <a 
-                          href={project.demoUrl} 
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center gap-2 text-white font-semibold hover:text-primary transition-colors"
-                        >
-                          View Case Study <ArrowUpRight size={18} />
-                        </a>
-                      )}
+                      <Link 
+                        to={`/project/${project.id}`}
+                        className="flex items-center gap-2 text-white font-semibold hover:text-primary transition-colors"
+                      >
+                        View Case Study <ArrowUpRight size={18} />
+                      </Link>
                    </div>
                 </div>
 
